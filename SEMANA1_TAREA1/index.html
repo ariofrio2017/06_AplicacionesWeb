@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Personal - Andy Riofrio Arellano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Andy Riofrio Arellano</h1>
+            <p class="subtitle">Desarrollador Senior .NET | Líder Técnico | SQL Server</p>
+            <p class="contact-info">📍 Guayaquil, Ecuador | 📞 0988557708 | ✉️ andyriofrioarellano@gmail.com</p>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <!-- Perfil Profesional -->
+        <section class="card">
+            <h2>Perfil Profesional</h2>
+            <p>Desarrollador Senior con más de 9 años de experiencia en .NET, SQL Server, procesos batch, servicios REST y sistemas financieros. Experiencia trabajando en ambientes altamente demandantes, optimizando procesos de alto volumen y desarrollando soluciones críticas para instituciones financieras en Ecuador y de manera remota para instituciones internacionales (Costa Rica), en entornos donde la precisión, la seguridad y la estabilidad son fundamentales.</p>
+        </section>
+
+        <!-- Conocimientos Técnicos -->
+        <section class="card">
+            <h2>Conocimientos Técnicos</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <p>.NET, C#, ASP.NET MVC, WebForms, Windows Forms</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Base de datos</h3>
+                    <p>SQL Server, T-SQL, Procedimientos Almacenados, optimización</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <p>Angular (básico), JavaScript, TypeScript, jQuery, Bootstrap</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & DevOps</h3>
+                    <p>Azure Fundamentals, Git, GitLab CI/CD, OpenShift</p>
+                </div>
+                <div class="skill-category">
+                    <h3>APIs & Seguridad</h3>
+                    <p>REST, Postman, Swagger, OWASP Top 10</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Metodologías</h3>
+                    <p>Scrum, documentación, análisis de impacto</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiencia Laboral -->
+        <section class="card">
+            <h2>Experiencia Laboral</h2>
+            
+            <div class="job-item">
+                <h3>Analista Senior de Desarrollo — NUEK (Credimatic S.A.)</h3>
+                <p class="period">Abril 2024 - Actualidad</p>
+                <p>Desarrollo backend en .NET, C#, SQL Server, servicios cloud-ready en OpenShift, desarrollo básico en Angular, y procesos batch e integraciones.</p>
+                <p><strong>Logros principales:</strong> Mejora del rendimiento de procesos batch, documentación y pruebas técnicas, e implementación de servicios en OpenShift.</p>
+            </div>
+
+            <div class="job-item">
+                <h3>Analista de Desarrollo / Líder Técnico — TECHSOFT (Coopenae, Costa Rica)</h3>
+                <p class="period">Enero 2020 - Abril 2024</p>
+                <p>Desarrollo en .NET, SQL Server, batch, reportes financieros y archivos TXT, Windows Forms y servicios REST. Como Líder Técnico (2023-2024), realicé estimación de tiempos, análisis de impacto, organización de turnos de stand-by y rediseño del Estado de Cuenta bajo regulaciones de Costa Rica.</p>
+            </div>
+
+            <div class="job-item">
+                <h3>Experiencia Adicional</h3>
+                <p><strong>AGROSOFT:</strong> Analista de Desarrollo (2020) | <strong>VIAMATICA:</strong> Analista de Desarrollo TI (2019) | <strong>IROUTE SOLUTIONS:</strong> Analista Programador (2016-2019) | <strong>SINERGIA:</strong> Programador (2015-2016)</p>
+            </div>
+        </section>
+
+        <!-- Educación y Certificaciones -->
+        <section class="grid-2">
+            <div class="card">
+                <h2>Educación</h2>
+                <div class="item">
+                    <h3>Estudiante de Ingeniería en Software</h3>
+                    <p class="institution">UNIANDES</p>
+                </div>                
+                <div class="item">
+                    <h3>Tecnólogo en Desarrollo de Software</h3>
+                    <p class="institution">Instituto Superior Tecnológico Espíritu Santo</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Certificaciones</h2>
+                <ul class="cert-list">
+                    <li>C# with Microsoft - Microsoft</li>
+                    <li>Azure Fundamentals - Microsoft</li>
+                    <li>Scrum Foundation - CertiProf</li>
+                    <li>OWASP Top 10 Secure Development - GM Sectec</li>
+                    <li>OpenShift & GitLab Projects - Udemy Business</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="card calculator-section">
+            <h2>Calculadora Web</h2>
+            <p>Calculadora para operaciones matemáticas básicas.</p>
+            
+            <div class="calculator-box">
+                <div class="form-group">
+                    <label>Número 1:</label>
+                    <input type="number" id="num1" placeholder="Ingrese número">
+                </div>
+
+                <div class="form-group">
+                    <label>Número 2:</label>
+                    <input type="number" id="num2" placeholder="Ingrese número">
+                </div>
+
+                <div class="calc-buttons">
+                    <button onclick="calcular('+')">+</button>
+                    <button onclick="calcular('-')">-</button>
+                    <button onclick="calcular('*')">×</button>
+                    <button onclick="calcular('/')">÷</button>
+                </div>
+
+                <div id="resultado-calc" class="calc-result" style="display: none;">
+                    <strong>Resultado:</strong> <span id="val-resultado"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Andy Riofrio Arellano | Desarrollado para la materia Aplicaciones Web</p>
+    </footer>
+
+    <script>
+        function calcular(operacion) {
+            let Numero1 = parseFloat(document.getElementById('num1').value);
+            let Numero2 = parseFloat(document.getElementById('num2').value);
+            let resDiv = document.getElementById('resultado-calc');
+            let valSpan = document.getElementById('val-resultado');
+
+            if (isNaN(Numero1) || isNaN(Numero2)) {
+                valSpan.textContent = "Por favor ingrese ambos números.";
+                resDiv.style.display = "block";
+                resDiv.style.background = "#fadbd8";
+                resDiv.style.color = "#900c3f";
+                return;
+            }
+
+            let resultado = 0;
+            if (operacion === '+') resultado = Numero1 + Numero2;
+            if (operacion === '-') resultado = Numero1 - Numero2;
+            if (operacion === '*') resultado = Numero1 * Numero2;
+            if (operacion === '/') {
+                if (Numero2 === 0) {
+                    valSpan.textContent = "Error: División entre cero.";
+                    resDiv.style.display = "block";
+                    resDiv.style.background = "#fadbd8";
+                    resDiv.style.color = "#900c3f";
+                    return;
+                }
+                resultado = Numero1 / Numero2;
+            }
+
+            resDiv.style.display = "block";
+            resDiv.style.background = "#e8f8f5";
+            resDiv.style.color = "#117a65";
+            valSpan.textContent = resultado;
+        }
+    </script>
+</body>
+</html>
