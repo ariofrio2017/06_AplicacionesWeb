@@ -1,0 +1,14 @@
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\bin\Debug\net8.0\ConsolePruevaVariables.exe
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\bin\Debug\net8.0\ConsolePruevaVariables.deps.json
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\bin\Debug\net8.0\ConsolePruevaVariables.runtimeconfig.json
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\bin\Debug\net8.0\ConsolePruevaVariables.dll
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\bin\Debug\net8.0\ConsolePruevaVariables.pdb
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\obj\Debug\net8.0\ConsolePruevaVariables.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\obj\Debug\net8.0\ConsolePruevaVariables.AssemblyInfoInputs.cache
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\obj\Debug\net8.0\ConsolePruevaVariables.AssemblyInfo.cs
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\obj\Debug\net8.0\ConsolePruevaVariables.csproj.CoreCompileInputs.cache
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\obj\Debug\net8.0\ConsolePruevaVariables.dll
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\obj\Debug\net8.0\refint\ConsolePruevaVariables.dll
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\obj\Debug\net8.0\ConsolePruevaVariables.pdb
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\obj\Debug\net8.0\ConsolePruevaVariables.genruntimeconfig.cache
+C:\Proyectos\UNIANDES\ConsolePruevaVariables\obj\Debug\net8.0\ref\ConsolePruevaVariables.dll

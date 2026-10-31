@@ -1,0 +1,151 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Currículum y Calculadora .NET - Andy Riofrio";
+}
+
+<header class="hero">
+    <div class="container">
+        <h1>Andy Riofrio Arellano</h1>
+        <p class="subtitle">Desarrollador Senior .NET | Líder Técnico | SQL Server</p>
+        <p class="contact-info">📍 Guayaquil, Ecuador | 📞 0988557708 | ✉️ andyriofrioarellano@gmail.com</p>
+    </div>
+</header>
+
+<main class="container main-content">
+    <!-- Sección Perfil -->
+    <section class="card">
+        <h2>Perfil Profesional</h2>
+        <p>Desarrollador Senior con más de 9 años de experiencia en .NET, SQL Server, procesos batch, servicios REST y sistemas financieros. Experiencia trabajando en ambientes altamente demandantes, optimizando procesos de alto volumen y desarrollando soluciones críticas para instituciones financieras en Ecuador y de manera remota para instituciones internacionales (Costa Rica), en entornos donde la precisión, la seguridad y la estabilidad son fundamentales.</p>
+    </section>
+
+    <!-- Conocimientos Técnicos -->
+    <section class="card">
+        <h2>Conocimientos Técnicos</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Backend</h3>
+                <p>.NET, C#, ASP.NET MVC, WebForms, Windows Forms</p>
+            </div>
+            <div class="skill-category">
+                <h3>Base de datos</h3>
+                <p>SQL Server, T-SQL, Procedimientos Almacenados, optimización</p>
+            </div>
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <p>Angular (básico), JavaScript, TypeScript, jQuery, Bootstrap</p>
+            </div>
+            <div class="skill-category">
+                <h3>Cloud & DevOps</h3>
+                <p>Azure Fundamentals, Git, GitLab CI/CD, OpenShift</p>
+            </div>
+            <div class="skill-category">
+                <h3>APIs & Seguridad</h3>
+                <p>REST, Postman, Swagger, OWASP Top 10</p>
+            </div>
+            <div class="skill-category">
+                <h3>Metodologías</h3>
+                <p>Scrum, documentación, análisis de impacto</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Laboral -->
+    <section class="card">
+        <h2>Experiencia Laboral</h2>
+        
+        <div class="job-item">
+            <h3>Analista Senior de Desarrollo — NUEK (Credimatic S.A.)</h3>
+            <p class="period">Abril 2024 - Actualidad</p>
+            <p>Desarrollo backend en .NET, C#, SQL Server, servicios cloud-ready en OpenShift, desarrollo básico en Angular, y procesos batch e integraciones.</p>
+            <p><strong>Logros principales:</strong> Mejora del rendimiento de procesos batch, documentación y pruebas técnicas, e implementación de servicios en OpenShift.</p>
+        </div>
+
+        <div class="job-item">
+            <h3>Analista de Desarrollo / Líder Técnico — TECHSOFT (Coopenae, Costa Rica)</h3>
+            <p class="period">Enero 2020 - Abril 2024</p>
+            <p>Desarrollo en .NET, SQL Server, batch, reportes financieros y archivos TXT, Windows Forms y servicios REST. Como Líder Técnico (2023-2024), realicé estimación de tiempos, análisis de impacto, organización de turnos de stand-by y rediseño del Estado de Cuenta bajo regulaciones de Costa Rica.</p>
+        </div>
+
+        <div class="job-item">
+            <h3>Experiencia Adicional</h3>
+            <p><strong>AGROSOFT:</strong> Analista de Desarrollo (2020) | <strong>VIAMATICA:</strong> Analista de Desarrollo TI (2019) | <strong>IROUTE SOLUTIONS:</strong> Analista Programador (2016-2019) | <strong>SINERGIA:</strong> Programador (2015-2016)</p>
+        </div>
+    </section>
+
+    <!-- Educación y Certificaciones -->
+    <section class="grid-2">
+        <div class="card">
+            <h2>Educación</h2>
+            <div class="item">
+                <h3>Estudiante Sexto Semestre Ingeniería en Software</h3>
+                <p class="institution">UNIANDES</p>
+            </div>
+            <div class="item">
+                <h3>Tecnólogo en Desarrollo de Software</h3>
+                <p class="institution">Instituto Superior Tecnológico Espíritu Santo</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Certificaciones</h2>
+            <ul class="cert-list">
+                <li>C# with Microsoft - Microsoft</li>
+                <li>Azure Fundamentals - Microsoft</li>
+                <li>Scrum Foundation - CertiProf</li>
+                <li>OWASP Top 10 Secure Development - GM Sectec</li>
+                <li>OpenShift & GitLab Projects - Udemy Business</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- MÓDULO INTERACTIVO: CALCULADORA WEB EN .NET -->
+    <section class="card calculator-section">
+        <h2>Módulo Interactivo: Calculadora Web (.NET)</h2>
+        <p>Calculadora integrada conectada al backend en C# para procesar las operaciones en el servidor.</p>
+        
+        <div class="calculator-box">
+            <form method="post">
+                <div class="form-group">
+                    <label>Número 1:</label>
+                    <input type="number" step="any" asp-for="Numero1" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Número 2:</label>
+                    <input type="number" step="any" asp-for="Numero2" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Operación:</label>
+                    <select asp-for="Operacion">
+                        <option value="sumar">Sumar (+)</option>
+                        <option value="restar">Restar (-)</option>
+                        <option value="multiplicar">Multiplicar (×)</option>
+                        <option value="dividir">Dividir (÷)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="calc-btn">Calcular en Servidor (.NET)</button>
+            </form>
+
+            @if (Model.Resultado != null)
+            {
+                <div class="calc-result success">
+                    <strong>Resultado:</strong> <span>@Model.Resultado</span>
+                </div>
+            }
+
+            @if (!string.IsNullOrEmpty(Model.MensajeError))
+            {
+                <div class="calc-result error">
+                    <strong>@Model.MensajeError</strong>
+                </div>
+            }
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 - Andy Riofrio Arellano | Desarrollado para la materia Aplicaciones Web</p>
+</footer>
