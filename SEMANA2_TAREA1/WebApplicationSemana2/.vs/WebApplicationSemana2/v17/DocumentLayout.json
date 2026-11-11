@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|c:\\proyectos\\uniandes\\semana2_tarea2\\webapplicationsemana2\\views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|solutionrelative:views\\clientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|c:\\proyectos\\uniandes\\semana2_tarea2\\webapplicationsemana2\\views\\clientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|solutionrelative:views\\clientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|c:\\proyectos\\uniandes\\semana2_tarea2\\webapplicationsemana2\\views\\clientes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|solutionrelative:views\\clientes\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|c:\\proyectos\\uniandes\\semana2_tarea2\\webapplicationsemana2\\views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|solutionrelative:views\\clientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|c:\\proyectos\\uniandes\\semana2_tarea2\\webapplicationsemana2\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|solutionrelative:views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|c:\\proyectos\\uniandes\\semana2_tarea2\\webapplicationsemana2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|c:\\proyectos\\uniandes\\semana2_tarea2\\webapplicationsemana2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|c:\\proyectos\\uniandes\\semana2_tarea2\\webapplicationsemana2\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|solutionrelative:controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|c:\\proyectos\\uniandes\\semana2_tarea2\\webapplicationsemana2\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|c:\\proyectos\\uniandes\\semana2_tarea2\\webapplicationsemana2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|c:\\proyectos\\uniandes\\semana2_tarea2\\webapplicationsemana2\\webapplicationsemana2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|solutionrelative:webapplicationsemana2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|c:\\proyectos\\uniandes\\semana2_tarea2\\webapplicationsemana2\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B57D5648-090E-47E7-8CB5-4CE402A48CB2}|WebApplicationSemana2.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Views\\Clientes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Clientes\\Edit.cshtml",
+              "ToolTip": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Views\\Clientes\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Clientes\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-31T03:06:54.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Views\\Clientes\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Clientes\\Details.cshtml",
+              "ToolTip": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Views\\Clientes\\Details.cshtml",
+              "RelativeToolTip": "Views\\Clientes\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-31T03:06:37.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Views\\Clientes\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Clientes\\Delete.cshtml",
+              "ToolTip": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Views\\Clientes\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Clientes\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-31T03:06:20.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Views\\Clientes\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Clientes\\Create.cshtml",
+              "ToolTip": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Views\\Clientes\\Create.cshtml",
+              "RelativeToolTip": "Views\\Clientes\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-31T03:05:27.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Views\\Clientes\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Clientes\\Index.cshtml",
+              "ToolTip": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Views\\Clientes\\Index.cshtml",
+              "RelativeToolTip": "Views\\Clientes\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-31T03:05:28.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACkAAACA3XM029gvwBwAAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-31T02:56:30.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "Controllers\\ClientesController.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAuwIoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T02:36:41.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T02:07:06.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-31T02:04:41.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T01:53:53.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WebApplicationSemana2",
+              "DocumentMoniker": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\WebApplicationSemana2.csproj",
+              "RelativeDocumentMoniker": "WebApplicationSemana2.csproj",
+              "ToolTip": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\WebApplicationSemana2.csproj",
+              "RelativeToolTip": "WebApplicationSemana2.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-31T01:51:47.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Cliente.cs",
+              "ToolTip": "C:\\Proyectos\\UNIANDES\\SEMANA2_TAREA2\\WebApplicationSemana2\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T01:48:07.463Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
