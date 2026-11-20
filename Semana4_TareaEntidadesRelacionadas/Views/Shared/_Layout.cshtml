@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Gestión Académica</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Semana4_TareaEntidadesRelacionadas.styles.css" asp-append-version="true" />
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm mb-4 py-2">
+            <div class="container">
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2 text-info" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-mortarboard-fill fs-4"></i>
+                    <span>Sistema Académico</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+                        <li class="nav-item">
+                            <a class="nav-link px-3 rounded" asp-area="" asp-controller="Home" asp-action="Index">
+                                <i class="bi bi-house-door me-1"></i> Inicio
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3 rounded" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-diagram-3 me-1"></i> Oferta Académica
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark shadow">
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Facultades" asp-action="Index">
+                                        <i class="bi bi-building me-2 text-info"></i> Facultades
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Carreras" asp-action="Index">
+                                        <i class="bi bi-journal-bookmark me-2 text-info"></i> Carreras
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Cursos" asp-action="Index">
+                                        <i class="bi bi-book me-2 text-info"></i> Cursos
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link px-3 rounded" asp-area="" asp-controller="Estudiantes" asp-action="Index">
+                                <i class="bi bi-people me-1"></i> Estudiantes
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link px-3 rounded" asp-area="" asp-controller="Matriculas" asp-action="Index">
+                                <i class="bi bi-card-checklist me-1"></i> Matrículas
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <a class="btn btn-info btn-sm fw-semibold text-dark px-3 rounded-pill shadow-sm"
+                           asp-area="" asp-controller="Matriculas" asp-action="Create">
+                            <i class="bi bi-plus-circle me-1"></i> Nueva Matrícula
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container flex-grow-1">
+        <main role="main" class="pb-4">
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-body p-4">
+                    @RenderBody()
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="bg-white border-top py-3 mt-auto text-muted small">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center">
+            <span>&copy; 2026 - Semana4_TareaEntidadesRelacionadas</span>
+            <a class="text-decoration-none text-secondary" asp-area="" asp-controller="Home" asp-action="Privacy">
+                <i class="bi bi-shield-check me-1"></i> Privacidad
+            </a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,86 @@
+@model Semana4_TareaEntidadesRelacionadas.Models.Matricula
+
+@{
+    ViewData["Title"] = "Nueva Matrícula";
+}
+
+<h1 class="h3 mb-1">Registrar Matrícula</h1>
+<p class="text-muted mb-3">Seleccione el estudiante y filtre la oferta académica en cascada.</p>
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="EstudianteId" class="form-label fw-semibold">Estudiante</label>
+                <select asp-for="EstudianteId" class="form-select" asp-items="ViewBag.EstudianteId">
+                    <option value="">-- Seleccione un Estudiante --</option>
+                </select>
+                <span asp-validation-for="EstudianteId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="FacultadId" class="form-label fw-semibold">Facultad</label>
+                <select id="FacultadId" class="form-select" asp-items="ViewBag.FacultadId">
+                    <option value="">-- Seleccione una Facultad --</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="CarreraId" class="form-label fw-semibold">Carrera</label>
+                <select id="CarreraId" class="form-select" asp-items="ViewBag.CarreraId" disabled>
+                    <option value="">-- Seleccione una Carrera --</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CursoId" class="form-label fw-semibold">Curso</label>
+                <select asp-for="CursoId" id="CursoId" class="form-select" asp-items="ViewBag.CursoId" disabled>
+                    <option value="">-- Seleccione un Curso --</option>
+                </select>
+                <span asp-validation-for="CursoId" class="text-danger"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="FechaInscripcion" class="form-label fw-semibold"></label>
+                    <input asp-for="FechaInscripcion" class="form-control" />
+                    <span asp-validation-for="FechaInscripcion" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Estado" class="form-label fw-semibold"></label>
+                    <input asp-for="Estado" class="form-control" placeholder="Ej. Activa, Pendiente" />
+                    <span asp-validation-for="Estado" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CostoMatricula" class="form-label fw-semibold"></label>
+                <input asp-for="CostoMatricula" class="form-control" />
+                <span asp-validation-for="CostoMatricula" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Observaciones" class="form-label fw-semibold"></label>
+                <textarea asp-for="Observaciones" class="form-control" rows="2"></textarea>
+                <span asp-validation-for="Observaciones" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex gap-2 mt-4">
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-check-lg me-1"></i> Guardar Matrícula
+                </button>
+                <a asp-action="Index" class="btn btn-outline-secondary">Volver al listado</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,73 @@
+@model Semana4_TareaEntidadesRelacionadas.Models.Matricula
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Matricula</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaInscripcion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaInscripcion)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CostoMatricula)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CostoMatricula)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CursoId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CursoId)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Curso)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Curso)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EstudianteId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EstudianteId)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Estudiante)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estudiante)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

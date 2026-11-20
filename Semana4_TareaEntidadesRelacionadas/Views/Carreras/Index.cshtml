@@ -1,0 +1,71 @@
+@model IEnumerable<Semana4_TareaEntidadesRelacionadas.Models.Carrera>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DuracionAnios)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modalidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jornada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FacultadId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Facultad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cursos)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.DuracionAnios)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Modalidad)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Jornada)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.FacultadId)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Facultad)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.Cursos)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
