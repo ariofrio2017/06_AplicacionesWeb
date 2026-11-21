@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="py-2">
+    <div class="p-4 p-md-5 rounded-3 bg-light border">
+        <div class="container-fluid py-2">
+            <span class="badge bg-info text-dark mb-2 px-3 py-2 rounded-pill fw-semibold">
+                <i class="bi bi-journal-check me-1"></i>Sistema de Gestión de Biblioteca
+            </span>
+            <h1 class="display-5 fw-bold mt-2">Bienvenido a Biblioteca MVC</h1>
+            <p class="col-md-9 fs-5 text-muted mt-2">
+                Administra el catálogo de libros, autores y su relación de autoría múltiple, el registro de miembros
+                y el control de préstamos desde una interfaz ágil construida con ASP.NET Core MVC y Entity Framework Core.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mt-4">
+                <a class="btn btn-primary btn-lg px-4" asp-controller="Libros" asp-action="Index">
+                    <i class="bi bi-journal-bookmark me-2"></i>Ver Libros
+                </a>
+                <a class="btn btn-outline-danger btn-lg px-4" asp-controller="Prestamos" asp-action="Index">
+                    <i class="bi bi-arrow-left-right me-2"></i>Ir a Préstamos
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

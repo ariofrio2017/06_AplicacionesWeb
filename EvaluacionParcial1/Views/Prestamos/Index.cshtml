@@ -1,0 +1,144 @@
+@model IEnumerable<EvaluacionParcial1.Models.Prestamo>
+
+@{
+    ViewData["Title"] = "Préstamos";
+}
+
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+    <div>
+        <h2 class="fw-bold mb-1">
+            <i class="bi bi-arrow-left-right text-danger me-2"></i>Préstamos
+        </h2>
+        <p class="text-muted mb-0">
+            Control de préstamos de libros a miembros, fechas y estado actual.
+        </p>
+    </div>
+    <a asp-action="Create" class="btn btn-danger">
+        <i class="bi bi-plus-lg me-1"></i>Nuevo Préstamo
+    </a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover table-striped align-middle border">
+        <thead class="table-dark">
+            <tr>
+                <th>Libro</th>
+                <th>Miembro</th>
+                <th class="text-center">Fecha de préstamo</th>
+                <th class="text-center">Fecha de devolución</th>
+                <th class="text-center">Estado</th>
+                <th class="text-end">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="6" class="text-center text-muted py-4">
+                        <i class="bi bi-info-circle me-1"></i>No hay préstamos registrados todavía.
+                    </td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    var nombreMiembro = item.Miembro != null
+                    ? $"{item.Miembro.Nombre} {item.Miembro.Apellido}"
+                    : $"Miembro #{item.MiembroId}";
+
+                    var tituloLibro = item.Libro?.Titulo ?? $"Libro #{item.LibroId}";
+
+                    var badgeEstado = item.Estado switch
+                    {
+                        "Activo" => "bg-primary-subtle text-primary-emphasis border",
+                        "Devuelto" => "bg-success-subtle text-success-emphasis border",
+                        "Vencido" => "bg-danger-subtle text-danger-emphasis border",
+                        _ => "bg-secondary-subtle text-secondary-emphasis border"
+                    };
+
+                    <tr>
+                        <td class="fw-semibold">@tituloLibro</td>
+                        <td>@nombreMiembro</td>
+                        <td class="text-center">@item.FechaPrestamo.ToString("dd/MM/yyyy")</td>
+                        <td class="text-center">
+                            @(item.FechaDevolucion.HasValue
+                                                ? item.FechaDevolucion.Value.ToString("dd/MM/yyyy")
+                                                : "Pendiente")
+                </td>
+                <td class="text-center">
+                    <span class="badge @badgeEstado px-3 py-1">@item.Estado</span>
+                </td>
+                <td class="text-end text-nowrap">
+                    <a asp-action="Edit" asp-route-id="@item.PrestamoId" class="btn btn-sm btn-outline-warning text-dark">
+                        <i class="bi bi-pencil"></i> Editar
+                    </a>
+                    <a asp-action="Details" asp-route-id="@item.PrestamoId" class="btn btn-sm btn-outline-info">
+                        <i class="bi bi-eye"></i> Detalles
+                    </a>
+                    <button type="button"
+                            class="btn btn-sm btn-outline-danger"
+                            data-bs-toggle="modal"
+                            data-bs-target="#confirmarEliminarPrestamoModal"
+                            data-prestamo-id="@item.PrestamoId"
+                            data-prestamo-desc="@($"{tituloLibro} - {nombreMiembro}")">
+                        <i class="bi bi-trash"></i> Eliminar
+                    </button>
+                </td>
+            </tr>
+                        }
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal de confirmación Bootstrap -->
+<div class="modal fade" id="confirmarEliminarPrestamoModal" tabindex="-1" aria-labelledby="confirmarEliminarPrestamoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title fw-bold" id="confirmarEliminarPrestamoLabel">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>Confirmar eliminación
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body py-4">
+                <p class="mb-0">
+                    ¿Estás seguro de que deseas eliminar el préstamo <strong id="prestamoDescModal"></strong>?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg me-1"></i>Cancelar
+                </button>
+                <form id="formEliminarPrestamo" method="post" class="d-inline">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn btn-danger">
+                        <i class="bi bi-check-lg me-1"></i>Confirmar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modalEl = document.getElementById("confirmarEliminarPrestamoModal");
+            const formEliminar = document.getElementById("formEliminarPrestamo");
+            const descSpan = document.getElementById("prestamoDescModal");
+
+            modalEl.addEventListener("show.bs.modal", function (event) {
+                const button = event.relatedTarget;
+                if (!button) return;
+
+                const prestamoId = button.getAttribute("data-prestamo-id");
+                const prestamoDesc = button.getAttribute("data-prestamo-desc");
+
+                descSpan.textContent = prestamoDesc;
+                formEliminar.setAttribute("action", `/Prestamos/Delete/${prestamoId}`);
+            });
+        });
+    </script>
+}

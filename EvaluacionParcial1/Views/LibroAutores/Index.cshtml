@@ -1,0 +1,60 @@
+@model IEnumerable<EvaluacionParcial1.Models.LibroAutor>
+
+@{
+    ViewData["Title"] = "Libros y Autores";
+}
+
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+    <div>
+        <h2 class="fw-bold mb-1">
+            <i class="bi bi-link-45deg text-info me-2"></i>Libros y Autores
+        </h2>
+        <p class="text-muted mb-0">
+            Consulta la relación entre libros y autores generada desde la gestión de libros.
+        </p>
+    </div>
+    <a asp-controller="Libros" asp-action="Index" class="btn btn-outline-primary">
+        <i class="bi bi-journal-bookmark me-1"></i>Ir a Libros
+    </a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover table-striped align-middle border">
+        <thead class="table-dark">
+            <tr>
+                <th>Libro</th>
+                <th>Autor</th>
+                <th class="text-center">Orden de autoría</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="3" class="text-center text-muted py-4">
+                        <i class="bi bi-info-circle me-1"></i>No hay relaciones de libros y autores registradas todavía.
+                    </td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="fw-semibold">
+                            @(item.Libro?.Titulo ?? $"Libro #{item.LibroId}")
+                        </td>
+                        <td>
+                            @(item.Autor != null ? $"{item.Autor.Nombre} {item.Autor.Apellido}" : $"Autor #{item.AutorId}")
+                        </td>
+                        <td class="text-center">
+                            <span class="badge bg-secondary rounded-pill px-3">
+                                #@item.OrdenAutoria
+                            </span>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,144 @@
+@model IEnumerable<EvaluacionParcial1.Models.Autor>
+
+@{
+    ViewData["Title"] = "Autores";
+}
+
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+    <div>
+        <h2 class="fw-bold mb-1">
+            <i class="bi bi-person-lines-fill text-success me-2"></i>Autores
+        </h2>
+        <p class="text-muted mb-0">
+            Registro de autores y los libros escritos por cada uno.
+        </p>
+    </div>
+    <a asp-action="Create" class="btn btn-success">
+        <i class="bi bi-plus-lg me-1"></i>Nuevo Autor
+    </a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover table-striped align-middle border">
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Nacionalidad</th>
+                <th>Libros escritos</th>
+                <th class="text-end">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (!Model.Any())
+            {
+                <tr>
+                    <td colspan="5" class="text-center text-muted py-4">
+                        <i class="bi bi-info-circle me-1"></i>No hay autores registrados todavía.
+                    </td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    var librosEscritos = item.LibroAutores != null && item.LibroAutores.Any()
+                    ? item.LibroAutores
+                    .Where(la => la.Libro != null)
+                    .Select(la => la.Libro!.Titulo)
+                    .Distinct()
+                    .ToList()
+                    : new List<string>();
+
+                    <tr>
+                        <td class="fw-semibold">@item.Nombre</td>
+                        <td class="fw-semibold">@item.Apellido</td>
+                        <td>@(string.IsNullOrWhiteSpace(item.Nacionalidad) ? "No especificada" : item.Nacionalidad)</td>
+                        <td>
+                            @if (librosEscritos.Any())
+                            {
+                                <div class="d-flex flex-wrap gap-1">
+                                    @foreach (var titulo in librosEscritos)
+                                    {
+                                        <span class="badge bg-info-subtle text-dark border px-2 py-1">@titulo</span>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <span class="text-muted fst-italic">Sin libros escritos</span>
+                            }
+                        </td>
+                        <td class="text-end text-nowrap">
+                            <a asp-action="Edit" asp-route-id="@item.AutorId" class="btn btn-sm btn-outline-warning text-dark">
+                                <i class="bi bi-pencil"></i> Editar
+                            </a>
+                            <a asp-action="Details" asp-route-id="@item.AutorId" class="btn btn-sm btn-outline-info">
+                                <i class="bi bi-eye"></i> Detalles
+                            </a>
+                            <button type="button"
+                                    class="btn btn-sm btn-outline-danger"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#confirmarEliminarAutorModal"
+                                    data-autor-id="@item.AutorId"
+                                    data-autor-nombre="@($"{item.Nombre} {item.Apellido}")">
+                                <i class="bi bi-trash"></i> Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal de confirmación Bootstrap -->
+<div class="modal fade" id="confirmarEliminarAutorModal" tabindex="-1" aria-labelledby="confirmarEliminarAutorLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title fw-bold" id="confirmarEliminarAutorLabel">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>Confirmar eliminación
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body py-4">
+                <p class="mb-0">
+                    ¿Estás seguro de que deseas eliminar al autor <strong id="autorNombreModal"></strong>?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg me-1"></i>Cancelar
+                </button>
+                <form id="formEliminarAutor" method="post" class="d-inline">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn btn-danger">
+                        <i class="bi bi-check-lg me-1"></i>Confirmar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modalEl = document.getElementById("confirmarEliminarAutorModal");
+            const formEliminar = document.getElementById("formEliminarAutor");
+            const nombreSpan = document.getElementById("autorNombreModal");
+
+            modalEl.addEventListener("show.bs.modal", function (event) {
+                const button = event.relatedTarget;
+                if (!button) return;
+
+                const autorId = button.getAttribute("data-autor-id");
+                const autorNombre = button.getAttribute("data-autor-nombre");
+
+                nombreSpan.textContent = autorNombre;
+                formEliminar.setAttribute("action", `/Autores/Delete/${autorId}`);
+            });
+        });
+    </script>
+}
